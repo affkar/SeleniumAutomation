@@ -15,7 +15,7 @@
     <dependency>
       <groupId>ru.stqa.selenium</groupId>
       <artifactId>webdriver-factory</artifactId>
-      <version>1.1.46</version>
+      <version>1.1.52</version>
     </dependency>
   </dependencies>
   <build>
@@ -64,15 +64,12 @@
   </build>
   <!-- profiles -->
   <profiles>
-    <!-- browsers -->
+    <!-- browsers  one of the below profiles will have to be activated-->
     <profile>
       <id>firefox</id>
       <properties>
         <capabilities>/firefox.capabilities</capabilities>
       </properties>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
     </profile>
     <profile>
       <id>chrome</id>
@@ -110,15 +107,19 @@
         <capabilities>/htmlunit.capabilities</capabilities>
       </properties>
     </profile>
-    <!-- environments -->
+    <!-- browsers end -->
+    <!-- environments one of the below profiles will have to be enabled-->
+    <profile>
+      <id>google</id>
+      <properties>
+        <site.url>${basedir}/NewFile.html</site.url>
+      </properties>
+    </profile>
     <profile>
       <id>localhost</id>
       <properties>
         <site.url>http://localhost/</site.url>
       </properties>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
     </profile>
     <profile>
       <id>devhost</id>
@@ -138,15 +139,13 @@
         <site.url>http://prodhost.com/</site.url>
       </properties>
     </profile>
-    <!-- grid -->
+    <!-- environment end -->
+    <!-- grid One of the below profiles will have to be activated-->
     <profile>
       <id>nogrid</id>
       <properties>
         <grid.url></grid.url>
       </properties>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
     </profile>
     <profile>
       <id>grid</id>
@@ -154,5 +153,6 @@
         <grid.url>http://localhost:4444/wd/hub/</grid.url>
       </properties>
     </profile>
+    <!-- grid end -->
   </profiles>
 </project>
