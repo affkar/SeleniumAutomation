@@ -1,5 +1,6 @@
 package com.karthick.selenium;
 
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.rules.ExternalResource;
 import org.junit.runner.RunWith;
@@ -10,7 +11,7 @@ import ru.stqa.selenium.factory.WebDriverFactory;
 import ru.stqa.selenium.factory.WebDriverFactoryMode;
 
 @RunWith(Suite.class)
-@SuiteClasses({SampleJUnitTest.class})
+@SuiteClasses({SampleJUnitTest.class,YoutubeJunitTest.class,HinduJunitTest.class,GitHubJunitTest.class})
 public class JUnitTestSuite {
 
   @Rule

@@ -11,6 +11,7 @@ public class HinduJunitTest extends JUnitTestBase{
 
 	@Before
 	public void initPageObjects() {
+		baseUrl="http://hindu.com";
 		homepage = PageFactory.initElements(driver, HomePage.class);
 	}
 	

@@ -110,18 +110,6 @@
     <!-- browsers end -->
     <!-- environments one of the below profiles will have to be enabled-->
     <profile>
-      <id>localfiles</id>
-      <properties>
-        <site.url>${basedir}/NewFile.html</site.url>
-      </properties>
-    </profile>
-    <profile>
-      <id>hindu</id>
-      <properties>
-        <site.url>http://www.hindu.com</site.url>
-      </properties>
-    </profile>
-    <profile>
       <id>localhost</id>
       <properties>
         <site.url>http://localhost/</site.url>

@@ -13,6 +13,7 @@ public class SampleJUnitTest extends JUnitTestBase {
 
 	@Before
 	public void initPageObjects() {
+		baseUrl="file:///home/karthick/eclipseworkspaces/firstone/SeleniumAutomation/NewFile.html";
 		homepage = PageFactory.initElements(driver, HomePage.class);
 	}
 
@@ -23,7 +24,7 @@ public class SampleJUnitTest extends JUnitTestBase {
 		assert homepage.header.getText() != null;
 		for (int i = 0; i < 10; i++) {
 			Thread.sleep(1000);
-		    Assert.assertTrue("Home Page Header in "+baseUrl+" is not as expected.","Say Hello".equals(homepage.header.getText()));
+		    Assert.assertTrue("Home Page Header in "+baseUrl+" is not as expected.","Say hello".equals(homepage.header.getText()));
 		    Assert.assertTrue("a".equals(homepage.item2.getTagName()));
 		    Assert.assertTrue("input".equals(homepage.elementByIdOrName.getTagName()));
 		    System.out.println("Clicking on Item2 - link");
